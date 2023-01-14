@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Amazfish
+Comment=Watch companion application
+Exec=/usr/bin/harbour-amazfish-ui
+Icon=harbour-amazfish
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+X-Osso-Type=application/x-executable
