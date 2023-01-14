@@ -2,7 +2,7 @@ Source: harbour-amazfish
 Section: user/desktop
 Priority: extra
 Maintainer: Norayr Chilingarian <norayr@arnet.am>
-Build-Depends: debhelper (>= 5), build-essential, pkg-config, qt5-qmake, qtdeclarative5-dev, libqt5core5a, libqt5gui5, libqt5maemo5-dev, qml-module-qt-labs-settings, libkdb3-dev, libkf5contacts-dev, libkf5coreaddons-dev, qtlocation5-dev, qtconnectivity5-dev, qtpositioning5-dev, qml-module-qtbluetooth, libmpris-qt5-1, libmpris-qt5-dev, qml-module-org-nemomobile-mpris, kirigami2-dev, qtbase5-dev, libkf5archive-dev, qtquickcontrols2-5-dev, libdbusextended-qt5-dev
+Build-Depends: debhelper (>= 5), libdbus-1-dev, pkg-config, qt5-qmake, qtdeclarative5-dev, libqt5core5a, libqt5gui5, libqt5maemo5-dev, qml-module-qt-labs-settings, libkdb3-dev, libkf5contacts-dev, libkf5coreaddons-dev, qtlocation5-dev, qtconnectivity5-dev, qtpositioning5-dev, qml-module-qtbluetooth, libmpris-qt5-1, libmpris-qt5-dev, qml-module-org-nemomobile-mpris, kirigami2-dev, qtbase5-dev, libkf5archive-dev, qtquickcontrols2-5-dev, libdbusextended-qt5-dev
 Standards-Version: 3.7.2
 
 Package: harbour-amazfish
