@@ -3,7 +3,9 @@
 build: build-stamp
 build-stamp:
 	dh_testdir
-	$(MAKE)
+	#$(MAKE)
+	qmake
+	PREFIX=/usr FLAVOR=kirigami make
 	touch build-stamp
 
 clean:
@@ -15,7 +17,7 @@ clean:
 install: build
 	dh_testdir
 	dh_testroot
-	$(MAKE) install_hildon
+	$(MAKE) install
 
 binary-indep: build install
 binary-arch: build install
