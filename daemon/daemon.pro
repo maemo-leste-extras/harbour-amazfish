@@ -12,8 +12,8 @@
 # The name of your application
 TARGET = harbour-amazfishd
 
-LIBS += -Lqble/qble -L$$OUT_PWD/../lib -lamazfish -lz
-PKGCONFIG += dbus-1
+LIBS += -Lqble/qble -L$$OUT_PWD/../lib -lamazfish -lz 
+PKGCONFIG += dbus-1 
 QT +=  positioning KDb3 network dbus KArchive
 CONFIG += c++14
 
@@ -82,7 +82,7 @@ flavor_silica {
     INSTALLS += privilege
 } else {
     message(Configuring service file for regular linux))
-    systemd_services.commands = sed \'s PREFIX $$PREFIX g\' $$PWD/harbour-amazfish.service.in > $$OUT_PWD/harbour-amazfish.service
+    #systemd_services.commands = sed \'s PREFIX $$PREFIX g\' $$PWD/harbour-amazfish.service.in > $$OUT_PWD/harbour-amazfish.service
     #systemd_services.commands =  cp $$PWD/harbour-amazfish.service.in $$OUT_PWD/harbour-amazfish.service; sed -i \'s PREFIX $$PREFIX g\' $$OUT_PWD/harbour-amazfish.service
 }
 

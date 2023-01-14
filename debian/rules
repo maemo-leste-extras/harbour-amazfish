@@ -4,20 +4,30 @@ build: build-stamp
 build-stamp:
 	dh_testdir
 	#$(MAKE)
-	qmake
-	PREFIX=/usr FLAVOR=kirigami make
+	mkdir -p build
+	cd build
+	##qmake PREFIX=/usr FLAVOR=qtcontrols
+	qmake PREFIX=/usr FLAVOR=kirigami
+	make
 	touch build-stamp
 
 clean:
 	dh_testdir
 	dh_testroot
-	-rm -f configure-stamp build-stamp 
+	-rm -f build configure-stamp build-stamp 
 	dh_clean
 
 install: build
 	dh_testdir
 	dh_testroot
-	$(MAKE) install
+	#$(MAKE) install
+	make INSTALL_ROOT="$pkgdir" install
+
+	install -Dm644 amazfish.desktop -t /etc/xdg/autostart/
+	install -Dm755 /amazfish-launcher.sh /usr/libexec/amazfish-launcher
+
+	# We don't ship systemd
+	#rm -r "$pkgdir"/usr/lib/systemd
 
 binary-indep: build install
 binary-arch: build install
