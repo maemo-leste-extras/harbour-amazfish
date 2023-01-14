@@ -3,12 +3,13 @@
 build: build-stamp
 build-stamp:
 	dh_testdir
+	make -f mkmaemo
 	#$(MAKE)
-	mkdir -p build
-	cd build
+	#mkdir -p build
+	#cd build
 	##qmake PREFIX=/usr FLAVOR=qtcontrols
-	qmake PREFIX=/usr FLAVOR=kirigami
-	make
+	#qmake PREFIX=/usr FLAVOR=kirigami
+	#make
 	touch build-stamp
 
 clean:
@@ -20,11 +21,12 @@ clean:
 install: build
 	dh_testdir
 	dh_testroot
+	make -f mkmaemo install
 	#$(MAKE) install
-	make INSTALL_ROOT="$pkgdir" install
+	#make INSTALL_ROOT="$pkgdir" install
 
-	install -Dm644 amazfish.desktop -t /etc/xdg/autostart/
-	install -Dm755 /amazfish-launcher.sh /usr/libexec/amazfish-launcher
+	#install -Dm644 amazfish.desktop -t /etc/xdg/autostart/
+	#install -Dm755 /amazfish-launcher.sh /usr/libexec/amazfish-launcher
 
 	# We don't ship systemd
 	#rm -r "$pkgdir"/usr/lib/systemd

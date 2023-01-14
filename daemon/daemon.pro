@@ -82,8 +82,8 @@ flavor_silica {
     INSTALLS += privilege
 } else {
     message(Configuring service file for regular linux))
-    #systemd_services.commands = sed \'s PREFIX $$PREFIX g\' $$PWD/harbour-amazfish.service.in > $$OUT_PWD/harbour-amazfish.service
-    #systemd_services.commands =  cp $$PWD/harbour-amazfish.service.in $$OUT_PWD/harbour-amazfish.service; sed -i \'s PREFIX $$PREFIX g\' $$OUT_PWD/harbour-amazfish.service
+    systemd_services.commands = sed \'s PREFIX $$PREFIX g\' $$PWD/harbour-amazfish.service.in > $$OUT_PWD/harbour-amazfish.service
+    systemd_services.commands =  cp $$PWD/harbour-amazfish.service.in $$OUT_PWD/harbour-amazfish.service; sed -i \'s PREFIX $$PREFIX g\' $$OUT_PWD/harbour-amazfish.service
 }
 
 INSTALLS += target \

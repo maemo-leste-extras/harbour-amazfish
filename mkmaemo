@@ -1,0 +1,27 @@
+all:
+	mkdir -p build
+	cd build && qmake PREFIX=$(CURDIR)/debian/harbour-amazfish FLAVOR=kirigami .. && make
+	#cd build && qmake PREFIX=/usr FLAVOR=kirigami .. && make
+	#qmake PREFIX=/usr FLAVOR=qtcontrols
+	#qmake PREFIX=/usr FLAVOR=kirigami
+	#make
+
+install:
+	mkdir -p $(CURDIR)/debian/harbour-amazfish/etc/xdg/autostart
+	mkdir -p $(CURDIR)/debian/harbour-amazfish/usr/libexec
+	mkdir -p $(CURDIR)/debian/harbour-amazfish/usr/bin
+	mkdir -p $(CURDIR)/debian/harbour-amazfish/usr/share/applications/hildon/
+	mkdir -p $(CURDIR)/debian/harbour-amazfish/usr/share/pixmaps/
+	cp $(CURDIR)/maemo/harbour-amazfish.png $(CURDIR)/debian/harbour-amazfish/usr/share/pixmaps/
+	#make INSTALL_ROOT="$pkgdir" install
+	cp $(CURDIR)/maemo/amazfish.desktop $(CURDIR)/debian/harbour-amazfish/etc/xdg/autostart/
+	cp $(CURDIR)/maemo/amazfish-launcher.sh $(CURDIR)/debian/harbour-amazfish/usr/libexec/amazfish-launcher
+	cp $(CURDIR)/build/daemon/harbour-amazfishd $(CURDIR)/debian/harbour-amazfish/usr/bin
+	cp $(CURDIR)/build/ui/harbour-amazfish-ui $(CURDIR)/debian/harbour-amazfish/usr/bin
+	cp $(CURDIR)/maemo/harbour-amazfish.desktop $(CURDIR)/debian/harbour-amazfish/usr/share/applications/hildon/
+
+        # We don't ship systemd
+        #rm -r "$pkgdir"/usr/lib/systemd
+
+clean:
+	rm -rf build
