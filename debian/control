@@ -1,0 +1,86 @@
+Source: amazfish
+Section: user/desktop
+Priority: extra
+Maintainer: Norayr Chilingarian <norayr@arnet.am>
+Build-Depends: debhelper (>= 5), build-essential, qt5-qmake, qtdeclarative5-dev, libqt5core5a, libqt5gui5, libqt5maemo5-dev, qml-module-qt-labs-settings, libkdb3-dev, libkf5contacts-dev, libkf5coreaddons-dev, qtlocation5-dev, qtconnectivity5-dev, qtpositioning5-dev, qml-module-qtbluetooth, libmpris-qt5-1, libmpris-qt5-dev, qml-module-org-nemomobile-mpris
+Standards-Version: 3.7.2
+
+Package: amazfish
+Architecture: any
+XSBC-Bugtracker: https://github.com/maemo-leste-extras/amazfish
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description:  Watch interface application
+ Supports:
+
+    Amazfit Bip
+    Amazfit GTS
+    Amazfit GTR2
+    Pinetime Infinitme
+    Bangle.js
+
+    Amazfit BipS
+    Amazfit Bip Lite
+    Amazfit GTS2
+
+    MiBand 2/3/4
+    Amazfit Cor
+
+XB-Maemo-Icon-26: 
+ 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
+ k2YrgasAAAAASUVORK5CYII=
+  ==== 
+
