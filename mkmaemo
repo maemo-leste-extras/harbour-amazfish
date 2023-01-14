@@ -16,6 +16,7 @@ install:
 	#make INSTALL_ROOT="$pkgdir" install
 	cp $(CURDIR)/maemo/amazfish.desktop $(CURDIR)/debian/harbour-amazfish/etc/xdg/autostart/
 	cp $(CURDIR)/maemo/amazfish-launcher.sh $(CURDIR)/debian/harbour-amazfish/usr/libexec/amazfish-launcher
+	cp $(CURDIR)/maemo/amazfish-ui-launcher.sh $(CURDIR)/debian/harbour-amazfish/usr/libexec/amazfish-ui-launcher
 	cp $(CURDIR)/build/daemon/harbour-amazfishd $(CURDIR)/debian/harbour-amazfish/usr/bin
 	cp $(CURDIR)/build/ui/harbour-amazfish-ui $(CURDIR)/debian/harbour-amazfish/usr/bin
 	cp $(CURDIR)/maemo/harbour-amazfish.desktop $(CURDIR)/debian/harbour-amazfish/usr/share/applications/hildon/

@@ -2,7 +2,7 @@
 Encoding=UTF-8
 Name=Amazfish
 Comment=Watch companion application
-Exec=/usr/bin/harbour-amazfish-ui
+Exec=/usr/libexec/amazfish-ui-launcher
 Icon=harbour-amazfish
 Terminal=false
 X-MultipleArgs=false

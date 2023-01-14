@@ -7,7 +7,7 @@ Standards-Version: 3.7.2
 
 Package: harbour-amazfish
 Architecture: any
-Depends: qml-module-org-kde-bluezqt, libkf5contacts5, libqt5bluetooth5, libqt5bluetooth5-bin, libqt5bluetooth5, libqt5bluetooth5-bin, libnemodbus, libkf5archive5, libmpris-qt5-1, qml-module-qtbluetooth, qml-module-org-nemomobile-mpris, libkdb3-driver-sqlite, qml-module-org-kde-kirigami2, kirigami-gallery, libkf5kirigami2-5, libqt5quickcontrols2-5, libdbusextended-qt5-1, ${shlibs:Depends}, ${misc:Depends}
+Depends: adwaita-qt, qml-module-org-kde-bluezqt, libkf5contacts5, libqt5bluetooth5, libqt5bluetooth5-bin, libqt5bluetooth5, libqt5bluetooth5-bin, libnemodbus, libkf5archive5, libmpris-qt5-1, qml-module-qtbluetooth, qml-module-org-nemomobile-mpris, libkdb3-driver-sqlite, qml-module-org-kde-kirigami2, kirigami-gallery, libkf5kirigami2-5, libqt5quickcontrols2-5, libdbusextended-qt5-1, ${shlibs:Depends}, ${misc:Depends}
 XSBC-Bugtracker: https://github.com/maemo-leste-extras/amazfish
 Description: Companion application for Huami Devices (such as Amazfit Bip, Cor, MiBand2/3 and GTS and GTS) and the Pinetime Infinitime
  Supports:
